@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Words</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<div class="container">
+		<h1 class="maintitle">Speed Reader</h1>
+		<ol>
+			<li>Paste in some test below and click "load text".</li>
+			<li>Set your reading speed (Default is 250WPM)</li>
+			<li>Click start to get reading.</li>
+		</ol>
+		<form class="startform" name="startform" action="javascript: var splitParaArray = splitPara();">
+			<textarea name="texttoread"></textarea>
+			<input type="submit" value="Load Text">
+		</form>
+
+		<form class="wpmform" name="wpmform" action="javascript: speed()">
+			<label>Enter your desired reading speed:</label>
+			<input name="wpm" type="text">
+			<input value="Change Speed" type="submit">
+		</form>
+
+
+		<h1 class="displayWordBox"></h1>
+
+		<div class="buttons">
+			<h2 class="start button"></h2>
+		</div>
+
+		<h2 class="speedtitle">You are reading at 250 Words Per Minute.</h2>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="functions.js"></script>
+</body>
+</html>
